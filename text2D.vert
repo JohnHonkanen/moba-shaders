@@ -18,6 +18,6 @@ void main(void) {
 	UV = uv;
     
     //gl_Position = vec4(FragPos, 1.0);
-	gl_Position = projection * view * vec4(FragPos, 1.0);
-	//gl_Position = projection * vec4(FragPos, 1.0);
+	//gl_Position = projection * view * vec4(FragPos, 1.0);
+	gl_Position = projection * vec4(FragPos, 1.0);
 }
