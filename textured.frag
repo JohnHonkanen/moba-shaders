@@ -26,6 +26,13 @@ void main(void) {
     vec3 diffuse = diff * lightColor;
             
     vec3 result = (ambient + diffuse);
-	vec4 tex = texture(diffuseMap, UV);
-    FragColor = tex * vec4(result, 1.0); //
+	
+
+	vec4 final_color = vec4(result, 1.0);
+	
+	vec4 tex0 = texture(diffuseMap, UV);
+	vec4 tex1 = texture(secondaryTexture, UV);
+
+    FragColor = mix(tex1,tex0, step(FragPos.y, partialRenderV)); //
+
 }
