@@ -4,6 +4,7 @@
 out vec4 FragColor;
 
 uniform sampler2D diffuseMap;
+uniform sampler2D secondaryTexture;
 
 in vec2 UV;
 
@@ -13,8 +14,10 @@ in vec3 FragPos;
 uniform vec3 lightPos; 
 uniform vec3 lightColor;
 uniform vec3 objectColor;
+uniform float partialRenderV;
  
 void main(void) {
+
     // ambient
     float ambientStrength = 0.1;
     vec3 ambient = ambientStrength * lightColor;
@@ -26,7 +29,6 @@ void main(void) {
     vec3 diffuse = diff * lightColor;
             
     vec3 result = (ambient + diffuse);
-	
 
 	vec4 final_color = vec4(result, 1.0);
 	

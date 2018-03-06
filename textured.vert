@@ -20,7 +20,7 @@ out vec2 UV;
 // multiply each vertex position by the MVP matrix
 void main(void) {
 
-	vec3 FragPos = vec3(model * vec4(position, 1.0));
+	FragPos = vec3(model * vec4(position, 1.0));
 	UV = uv;
 	Normal = normal; 
     
