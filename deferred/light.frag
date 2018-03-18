@@ -79,7 +79,7 @@ void main(void) {
 	// Properties:
 	vec3 viewDir = normalize(viewPosition - FragPos);
 	
-	vec3 result;
+	vec3 result = vec3(0);
 	int numLight = 0;
 	//Directional Light
 	result += calcDirectionalLight(directionalLight, Normal, FragPos, viewDir, Diffuse, Specular, Shininess, clipZ);
