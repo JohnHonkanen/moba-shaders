@@ -25,7 +25,7 @@ uniform sampler2D gAlbedoSpec;
 uniform sampler2D gEmission;
 
 
-const int MAX_LIGHTS = 200;
+const int MAX_LIGHTS = 10;
 uniform int numDirectionals;
 uniform int numPoints;
 
@@ -72,7 +72,7 @@ void main(void) {
 	
 	// Transform the world-space vertex position to light space. 
 	for (int i = 0 ; i < NUM_CASCADES ; i++) {
-        LightSpacePos[i] = lightSpaceMatrix[i  ] * vec4(FragPos, 1.0f);
+        LightSpacePos[i] = lightSpaceMatrix[i ] * vec4(FragPos, 1.0f);
     }
 
 
