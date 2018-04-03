@@ -25,7 +25,7 @@ uniform sampler2D gAlbedoSpec;
 uniform sampler2D gEmission;
 
 
-const int MAX_LIGHTS = 10;
+const int MAX_LIGHTS = 80;
 uniform int numDirectionals;
 uniform int numPoints;
 
